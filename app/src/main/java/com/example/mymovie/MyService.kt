@@ -11,7 +11,6 @@ class MyService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-        debug("onCreate called")
     }
 
     override fun onDestroy() {
@@ -20,8 +19,6 @@ class MyService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        debug("onStartCommand called")
-
         intent?.apply { processIntent(intent) } ?: return START_STICKY
 
         return super.onStartCommand(intent, flags, startId)
@@ -30,7 +27,14 @@ class MyService : Service() {
     private fun processIntent(intent: Intent) {
         intent.extras?.apply {
             val username = this.getString("username")
-            username?.let { debug(it) }
+
+            val showIntent = Intent(applicationContext, MainActivity::class.java)
+            showIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK +
+                        Intent.FLAG_ACTIVITY_SINGLE_TOP +
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            showIntent.putExtra("command", "show")
+            showIntent.putExtra("username", username)
+            startActivity(showIntent)
         }
     }
 

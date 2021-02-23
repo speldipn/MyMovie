@@ -33,5 +33,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        processIntent(intent)
+    }
+
+    private fun processIntent(intent: Intent?) {
+        debug("onNewIntent")
+        intent?.extras?.apply {
+            val command = getString("command")
+            command?.let {
+                if(it == "show") {
+                    textView.text = getString("username") ?: ""
+                }
+            }
+        }
+    }
+
     private fun debug(msg: String) = Log.d(TAG, msg)
 }

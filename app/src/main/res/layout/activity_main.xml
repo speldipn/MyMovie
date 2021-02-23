@@ -26,5 +26,12 @@
         android:layout_height="wrap_content"
         android:text="Send data" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:textColor="#ff0000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
