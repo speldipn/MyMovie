@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/editText"
-        android:ems="10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    tools:context=".MyNotiActivity">
 
     <Button
-        android:id="@+id/sendButton"
-        android:text="Sending"
+        android:id="@+id/sendNotiButton"
+        android:text="Sending notification"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
