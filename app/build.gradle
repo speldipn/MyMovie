@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mymovie"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -50,4 +50,10 @@ dependencies {
 
     // circle indicator
     implementation 'me.relex:circleindicator:2.1.4'
+
+    // And permission
+    implementation 'com.yanzhenjie:permission:2.0.3'
+
+    // Jsoup
+    implementation 'org.jsoup:jsoup:1.13.1'
 }
