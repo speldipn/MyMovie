@@ -19,7 +19,6 @@
             android:name=".ConnectivityReceiver"
             android:enabled="true"
             android:exported="true" />
-
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
@@ -32,18 +31,17 @@
             android:exported="true" />
 
         <!-- Activities -->
-        <activity
-            android:name=".SplashActivity"
-            android:theme="@style/AppTheme.Splash">
+        <activity android:name=".MapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.Splash" />
         <activity android:name=".MyNotiActivity" />
-
         <activity android:name=".MainActivity" />
     </application>
 
